@@ -1,0 +1,37 @@
+# Git
+.git
+.gitignore
+.dockerignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+venv
+.env
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Node.js
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Project Specific
+Dataset
+logs
+.vscode
+.idea
+*.md
+docker-compose.yml
+
+# Keep model weights for the build if needed, but usually we mount it. 
+# However, the Dockerfile copies it, so we should NOT ignore it if we want it baked in.
+# But for dev with volumes, we might want to ignore it to speed up context transfer if it's huge.
+# The Dockerfile has "COPY model.weights.h5 .", so we need it in the context.
+# We will NOT ignore model.weights.h5
